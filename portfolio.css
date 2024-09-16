@@ -1,0 +1,20 @@
+.activity {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    text-align: center;
+}
+
+.activity .item {
+    display: inline-block;
+}
+
+.activity img {
+    width: 150px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.activity .link {
+    margin-top: 10px;
+}
