@@ -230,3 +230,85 @@ html{
     object-fit: cover; 
     max-width: 100%; 
 }
+/* Media query for devices with a max width of 768px (smartphones and tablets) */
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 2em;
+    }
+
+    .home-content h3 {
+        font-size: 32px;
+    }
+
+    .home-content h1 {
+        font-size: 42px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .img-box img {
+        width: 300px;
+    }
+
+    .favorites, .schoolprojects {
+        flex-direction: column;
+        padding: 5% 5%;
+        gap: 2em;
+    }
+
+    .favorites-img img, .schoolprojects-img img {
+        width: 300px;
+    }
+
+    .favorites-content h2, .schoolprojects-content h2 {
+        font-size: 36px;
+    }
+
+    .favorites-content p, .schoolprojects-content p {
+        font-size: 16px;
+    }
+
+    .talents-vid {
+        flex-direction: column;
+    }
+
+    .talents-vid video {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .btn-1, .btn-2 {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
