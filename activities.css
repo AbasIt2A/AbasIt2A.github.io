@@ -1,0 +1,50 @@
+/* Ensuring that the body and html elements take up the full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container to hold heading and activities */
+.container {
+    text-align: center; /* Center text for the entire container */
+}
+
+/* Center the main container with Flexbox */
+.activity {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly between items */
+    align-items: center;           /* Centers vertically */
+    gap: 20px;                    /* Space between the items */
+    max-width: 80%;               /* Optional: controls the width of the container */
+}
+
+/* Styling individual items */
+.item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 150px; /* Adjust image size as needed */
+    height: auto;
+}
+
+.link a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.center {
+    margin-bottom: 20px;
+}
