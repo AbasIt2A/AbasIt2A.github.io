@@ -233,6 +233,7 @@ html{
 /* Media query for devices with a max width of 768px (smartphones and tablets) */
 @media only screen and (max-width: 768px) {
     .header {
+        position: relative;
         padding: 20px 5%;
         flex-direction: column;
         align-items: flex-start;
