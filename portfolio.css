@@ -191,24 +191,31 @@ span{
 }
 .schoolprojects{
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
-    padding: 12% 8%;
-    gap: 10em;
+    padding: 20px;
     background: #731963;
-    flex-direction: row-reverse;
+    gap: 2em;
 }
-.schoolprojects-img img{
-    position: relative;
-    width: 550px;
-    box-shadow: 0 0 25px orangered,
-                0 0 50px orangered;
-    border-radius: 50%;
+.schoolprojects h2 {
+    font-size: 48px;
+    color: #f0e100; /* Bright color for visibility */
+    text-align: center;
 }
-.schoolprojects-content h2{
-    text-align: left;
-    color: decbb7;
-    font-size: 42px;
+.schoolprojects-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.schoolprojects-img img {
+    width: 300px; /* Adjust width to make the image smaller */
+    box-shadow: 0 0 15px orangered, 0 0 30px orangered; /* Reduced shadow for better proportion */
+    border-radius: 0;
+}
+.schoolprojects-content {
+    align-items: center;
+    color: #decbb7; /* Corrected color code */
 }
 .schoolprojects-content h3{
     font-size: 62px;
@@ -221,10 +228,6 @@ span{
 }
 html{
     scroll-behavior: smooth;
-}
-.navbar a.active {
-    color: orangered;
-    border-bottom: 3px solid orangered; /* Highlight active link */
 }
 .talents {
     display: flex;
