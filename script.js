@@ -1,40 +1,22 @@
-const baseUrl = 'https://cors-anywhere.herokuapp.com/https://www.balldontlie.io/api/v1/players';
-
-// Fetch and display a random NBA player
-async function fetchPlayerData() {
+// Function to fetch random cat data using The Cat API
+async function fetchCatData() {
+  const catContainer = document.getElementById('cat-container');
   try {
-    // Fetch data from the API
-    const response = await fetch(baseUrl);
+      // Fetch random cat data from The Cat API
+      const response = await fetch('https://api.thecatapi.com/v1/images/search');
+      const data = await response.json();
+      const cat = data[0];
 
-    if (!response.ok) {
-      throw new Error(`API request failed with status: ${response.status}`);
-    }
+      // Display the random cat image and details
+      const catInfo = `
+          <h2>Meet Your Random Cat!</h2>
+          <img src="${cat.url}" alt="Random Cat Image" width="300">
+          
+      `;
 
-    // Parse the JSON response
-    const data = await response.json();
-
-    // Randomly select a player
-    const players = data.data;
-    if (!players || players.length === 0) {
-      throw new Error('No players found in the API response.');
-    }
-
-    const randomPlayer = players[Math.floor(Math.random() * players.length)];
-
-    // Display the player's information
-    const playerContainer = document.getElementById('NBA-container');
-    playerContainer.innerHTML = `
-      <h2>${randomPlayer.first_name} ${randomPlayer.last_name}</h2>
-      <p>Team: ${randomPlayer.team.full_name}</p>
-      <p>Position: ${randomPlayer.position || 'N/A'}</p>
-      <p>Height: ${randomPlayer.height_feet || 'N/A'}' ${randomPlayer.height_inches || ''}</p>
-      <p>Weight: ${randomPlayer.weight_pounds || 'N/A'} lbs</p>
-    `;
+      catContainer.innerHTML = catInfo;
   } catch (error) {
-    console.error('Error fetching player data:', error);
-
-    // Display error message to the user
-    const playerContainer = document.getElementById('meal-container');
-    playerContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+      console.error('Error fetching cat data:', error);
+      catContainer.innerHTML = '<p>Sorry, there was an error fetching the cat data.</p>';
   }
 }
