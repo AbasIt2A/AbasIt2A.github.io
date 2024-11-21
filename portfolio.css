@@ -70,6 +70,15 @@ span{
     gap: 7em;
     padding: 30px 12% 0;
 }
+.img-box {
+    flex-shrink: 0;
+    position: relative;
+}
+.img-box img {
+    border-radius: 50%;
+    width: 450px; 
+    max-width: 550px;
+} 
 .home-content{
     max-width: 800px;
 }
@@ -122,11 +131,6 @@ span{
     background-color: white;
     color: orangered;
 }
-.img-box img{
-    border-radius: 50%;
-    width: 550px;
-}
-
 ::-webkit-scrollbar{
     width: 15px;
 }
@@ -139,32 +143,46 @@ span{
 }
 .favorites{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 12% 8%;
-    gap: 10em;
-    background: black;
+    background: #0b3c49;
 }
-.favorites-img img{
-    position: relative;
-    width: 550px;
-    box-shadow: 0 0 25px orangered,
-                0 0 50px orangered;
-    border-radius: 50%;
+.favorites h2 {
+    font-size: 48px;
+    color: #f0e100;
+    margin-bottom: 20px;
 }
-.favorites-content h2{
-    text-align: left;
-    color: white;
-    font-size: 42px;
+.favorites-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em; /* Space between columns */
+    width: 100%;
+    max-width: 1200px;
 }
-.favorites-content h3{
-    font-size: 62px;
-    color: white;
+.favorites-item {
+    background: #ffffff; /* White cards for each category */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Ensure each column has a max width */
+    text-align: center;
 }
-.favorites-content p{
-    color: white;
-    font-size: 20px;
-    margin: 2em 0 3em;
+.favorites-item h3 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+}
+.favorites-item ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+.favorites-item li {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
 }
 .social-medias{
     font-size: 30px;
@@ -177,7 +195,7 @@ span{
     align-items: center;
     padding: 12% 8%;
     gap: 10em;
-    background: orangered;
+    background: #731963;
     flex-direction: row-reverse;
 }
 .schoolprojects-img img{
@@ -189,20 +207,24 @@ span{
 }
 .schoolprojects-content h2{
     text-align: left;
-    color: white;
+    color: decbb7;
     font-size: 42px;
 }
 .schoolprojects-content h3{
     font-size: 62px;
-    color: white;
+    color: 183139;
 }
 .schoolprojects-content p{
-    color: white;
+    color: decbb7;
     font-size: 20px;
     margin: 2em 0 3em;
 }
 html{
     scroll-behavior: smooth;
+}
+.navbar a.active {
+    color: orangered;
+    border-bottom: 3px solid orangered; /* Highlight active link */
 }
 .talents {
     display: flex;
@@ -267,11 +289,6 @@ html{
     .home-content p {
         font-size: 16px;
     }
-
-    .img-box img {
-        width: 300px;
-    }
-
     .favorites, .schoolprojects {
         flex-direction: column;
         padding: 5% 5%;
